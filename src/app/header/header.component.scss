@@ -2,6 +2,7 @@ $lt-gray: #ddd;
 $background-dark: #512DA8;
 $background-light: #9575CD;
 $background-pale: #D1C4E9;
+$backgroun-moredark: #4527A0;
 
 @mixin zero-margin($pad-up-down, $pad-left-right) {
     margin: 0px auto;
@@ -14,3 +15,21 @@ $background-pale: #D1C4E9;
     color:floralwhite;
     min-height: 150px;
 }
+
+.active {
+    background: $backgroun-moredark;
+    color: floralwhite;
+}
+
+.fuck{
+    position: absolute;
+    right:0;
+}
+
+.fill-space {
+    // This fills the remaining space, by using flexbox.
+    // Every toolbar row uses a flexbox row layout.
+    flex: 1 1 auto;
+  }
+
+  

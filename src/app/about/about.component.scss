@@ -1,0 +1,14 @@
+.box{
+    height:50px;
+    width:100%;
+    box-shadow: 3px 3px 3px 3px lightgrey;
+    margin-bottom:10px;
+}
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+  }

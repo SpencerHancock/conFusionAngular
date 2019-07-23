@@ -6,10 +6,11 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule } from '@angular/material/button';
 import { AppRoutingModule } from './app-routing/app-routing.module';
+import {MatDialogModule, MatFormFieldModule, MatButtonModule, MatInputModule} from '@angular/material';
 
 import { DishService } from './services/dish.service';
+import { FormsModule } from '@angular/forms';
 
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
@@ -20,6 +21,9 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { AppComponent } from './app.component';
+import { PromotionService } from './services/promotion.service';
+import { LeaderService } from './services/leader.service';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +34,8 @@ import { AppComponent } from './app.component';
     FooterComponent,
     HomeComponent,
     AboutComponent,
-    ContactusComponent
+    ContactusComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -42,10 +47,21 @@ import { AppComponent } from './app.component';
     MatGridListModule,
     MatCardModule,
     MatButtonModule,
-    AppRoutingModule
+    MatDialogModule,
+    AppRoutingModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule
+
   ],
+  entryComponents: [
+        LoginComponent
+  ]
+  ,
   providers: [
-    DishService
+    DishService,
+    PromotionService,
+    LeaderService
   ],
   bootstrap: [AppComponent]
 })
