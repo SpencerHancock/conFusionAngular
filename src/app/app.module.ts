@@ -7,10 +7,10 @@ import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { AppRoutingModule } from './app-routing/app-routing.module';
-import {MatDialogModule, MatFormFieldModule, MatButtonModule, MatInputModule} from '@angular/material';
+import {MatDialogModule, MatFormFieldModule, MatButtonModule, MatInputModule, MatCheckboxModule, MatSelectModule, MatSlideToggleModule } from '@angular/material';
 
 import { DishService } from './services/dish.service';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,  ReactiveFormsModule } from '@angular/forms';
 
 import 'hammerjs';
 import { MenuComponent } from './menu/menu.component';
@@ -51,7 +51,11 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     MatFormFieldModule,
     MatInputModule,
-    FormsModule
+    FormsModule,
+    MatCheckboxModule,
+    ReactiveFormsModule,
+    MatSelectModule,
+    MatSlideToggleModule
 
   ],
   entryComponents: [

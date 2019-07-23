@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {MatDialog, MatDialogRef} from '@angular/material';
+import { GridColumnStyleBuilder } from '@angular/flex-layout/grid/typings/column/column';
 
 @Component({
   selector: 'app-login',
@@ -8,10 +9,17 @@ import {MatDialog, MatDialogRef} from '@angular/material';
 })
 export class LoginComponent implements OnInit {
 
-  constructor( ) {}
+  user = {username: "", password:"", remember: false};
+
+  constructor(public diaolgRef: MatDialogRef<LoginComponent> ) {}
 
   ngOnInit() {
   }
 
+  onSubmit(){
+    console.log("User:", this.user);
+    this.diaolgRef.close();
 
+
+  }
 }
