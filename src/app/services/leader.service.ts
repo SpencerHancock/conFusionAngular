@@ -9,15 +9,15 @@ export class LeaderService {
 
   constructor() { }
 
-  getLeaders(): Leader[] {
-    return LEADERS
+  getLeaders(): Promise<Leader[]> {
+    return Promise.resolve(LEADERS);
   }
-  getFeaturedLeader(): Leader{
-    return ( LEADERS.filter((dish) => dish.featured)[0]);
+  getFeaturedLeader(): Promise<Leader>{
+    return Promise.resolve(( LEADERS.filter((dish) => dish.featured)[0]));
 
   }
 
-  getDish(id:string): Leader {
-    return (LEADERS.filter((dish) => dish.id===id)[0]);
+  getDish(id:string): Promise<Leader> {
+    return Promise.resolve((LEADERS.filter((dish) => dish.id===id)[0]));
   }
 }
