@@ -12,7 +12,6 @@ import { Leader } from '../shared/Leader';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-
   promotion: Promotion;
 
   dish: Dish;
@@ -23,11 +22,11 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.promotionService.getFeaturedPromotion()
-      .then(promotion => this.promotion = promotion);
+      .subscribe(promotion => this.promotion = promotion);
     this.dishService.getFeaturedDish()
-      .then(promotion => this.dish = promotion);
+      .subscribe(promotion => this.dish = promotion);
     this.leaderService.getFeaturedLeader()
-    .then(promotion => this.leader = promotion);
+    .subscribe(promotion => this.leader = promotion);
 
   }
 

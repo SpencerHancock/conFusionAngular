@@ -7,7 +7,7 @@ import { MatListModule } from '@angular/material/list';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { AppRoutingModule } from './app-routing/app-routing.module';
-import {MatDialogModule, MatFormFieldModule, MatButtonModule, MatInputModule, MatCheckboxModule, MatSelectModule, MatSlideToggleModule } from '@angular/material';
+import {MatDialogModule, MatFormFieldModule, MatButtonModule, MatInputModule, MatCheckboxModule, MatSelectModule, MatSlideToggleModule, MatProgressSpinnerModule, MatSliderModule } from '@angular/material';
 
 import { DishService } from './services/dish.service';
 import { FormsModule,  ReactiveFormsModule } from '@angular/forms';
@@ -55,7 +55,9 @@ import { LoginComponent } from './login/login.component';
     MatCheckboxModule,
     ReactiveFormsModule,
     MatSelectModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    MatProgressSpinnerModule,
+    MatSliderModule
 
   ],
   entryComponents: [
